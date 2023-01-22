@@ -1,0 +1,38 @@
+<template>
+	<button :class="$style.button">
+		<slot></slot>
+	</button>
+</template>
+
+<script>
+	export default {
+		name: 'u-button'
+	}
+</script>
+
+<style lang="scss" module>
+.button {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	padding: 10px 25px 10px 10px;
+	border-radius: 4px 0px 0px 4px;
+	transition: opacity 0.4s;
+	background: #232326;
+	cursor: pointer;
+
+	&:hover {
+		background: #ee725f;
+		transition: 0.2s;
+	}
+
+	&[disabled] {
+		opacity: 0.65;
+		transition: opacity 0.4s;
+		cursor: not-allowed;
+		&:hover {
+			background: #232326;
+		}
+	}
+}
+</style>
