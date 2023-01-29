@@ -1,0 +1,35 @@
+<template>
+	<u-popup :class="[$style.popupCopy, { [$style.visible]: isVisible }]">Ссылка скопирована!</u-popup>
+</template>
+
+<script>
+export default {
+	name: 'UPopupCopy',
+	props: {
+		isVisible: {
+			type: Boolean,
+			required: true
+		}
+	}
+};
+</script>
+
+<style lang="scss" module>
+.popupCopy {
+	max-width: 300px;
+	height: 40px;
+	right: 0;
+	bottom: -999px;
+	padding: 5px;
+	color: #fff;
+	padding: 5px;
+	background-color: #fa876b;
+}
+
+.visible {
+	visibility: visible;
+	bottom: 0;
+	opacity: 1;
+	transition: 0.8s;
+}
+</style>
