@@ -5,15 +5,14 @@
 </template>
 
 <script>
-	export default {
-		name: 'u-hint'
-	}
+export default {
+	name: 'UHint'
+};
 </script>
 
 <style lang="scss" module>
 .hint {
-  color: #868e96;
-  line-height: 1.4;
-  margin-bottom: 10px;
+	color: #868e96;
+	line-height: 1.4;
 }
 </style>

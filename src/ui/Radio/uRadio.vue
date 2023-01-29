@@ -1,38 +1,63 @@
 <template>
 	<u-label :class="$style.radioLabel"><slot></slot>
-		<u-input type="radio" :class="$style.radioInput"/>
+		<u-input :id="id" type="radio" :class="$style.radioInput" name="radio" :checked="id === selectedRadioId" @change="changeRadio(id)"/>
 		<span :class="$style.radio"></span>
 	</u-label>
 </template>
 
 <script>
-	export default {
-		name: 'u-radio'
+export default {
+	name: 'URadio',
+
+	props: {
+		id: {
+			type: String,
+			required: true
+		},
+
+		index: {
+			type: Number,
+			default: 0
+		},
+
+		selectedRadioId: {
+			type: String,
+			required: true
+		}
+	},
+
+	emits: ["change-radio"],
+
+	methods: {
+		changeRadio(id) {
+			this.$emit('change-radio', id);
+		}
 	}
+};
 </script>
 
 <style lang="scss" module>
 .radioLabel {
 	padding-left: 36px;
-	margin-bottom: 10px;
 }
 
 .radioInput {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  appearance: none;
-  &:checked + .radio {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	appearance: none;
+
+	&:checked+.radio {
 		&:after {
 			background-image: url('../../assets/img/radio-checked.svg');
 		}
-  }
+	}
 }
 
 .radio {
-  position: absolute;
+	position: absolute;
 	left: 0;
 
 	&:after {
@@ -44,5 +69,4 @@
 		background-image: url('../../assets/img/radio.svg');
 	}
 }
-
 </style>

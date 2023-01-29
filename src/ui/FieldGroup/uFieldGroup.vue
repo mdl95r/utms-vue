@@ -5,37 +5,35 @@
 </template>
 
 <script>
-	export default {
-		name: 'u-fieldgroup',
+export default {
+	name: 'UFieldgroup',
 
-		props: {
-			typeField: {
-				type: String,
-				required: true
-			}
+	props: {
+		typeField: {
+			type: String,
+			required: true
 		}
 	}
+};
 </script>
 
 <style lang="scss" module>
 .group {
-  &.radio {
-    margin-bottom: 30px;
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  }
+	&.radio {
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
 
-  &.edit {
-    display: grid;
-    gap: 0 20px;
-    margin-bottom: 20px;
+	&.edit {
+		display: grid;
+		gap: 20px;
 
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
 </style>

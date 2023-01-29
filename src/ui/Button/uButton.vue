@@ -6,8 +6,8 @@
 
 <script>
 	export default {
-		name: 'u-button'
-	}
+		name: 'UButton'
+	};
 </script>
 
 <style lang="scss" module>

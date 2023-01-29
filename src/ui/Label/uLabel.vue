@@ -6,8 +6,8 @@
 
 <script>
 	export default {
-		name: 'u-label'
-	}
+		name: 'ULabel'
+	};
 </script>
 
 <style lang="scss" module>
