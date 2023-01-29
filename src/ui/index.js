@@ -6,16 +6,7 @@ import uInput from './Input/uInput.vue';
 import uRadio from './Radio/uRadio.vue';
 import uDropdown from './Dropdown/uDropdown.vue';
 import uFieldLabel from './FieldLabel/uFieldLabel.vue';
-import FieldGroup from './FieldGroup/uFieldGroup.vue';
+import uFieldGroup from './FieldGroup/uFieldGroup.vue';
+import uPopup from './Popup/uPopup.vue';
 
-export default [
-  uButton,
-  uTitle,
-  uLabel,
-  uHint,
-  uInput,
-  uRadio,
-  uDropdown,
-  uFieldLabel,
-  FieldGroup,
-];
+export default [uButton, uTitle, uLabel, uHint, uInput, uRadio, uDropdown, uFieldLabel, uFieldGroup, uPopup];
