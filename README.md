@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+## Описание проекта
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Данное приложение может принести пользу для маркелогов, так как создание UTM-меток помогает отследить и проанализировать трафик сайта. Например, узнать, какой пост в соцсетях эффективнее других или насколько хорошо работает призыв к действию на лендинге.
 
-## Recommended IDE Setup
+## Работа с проектом
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Установка - npm install
+
+### Запуск - npm start
+
+### Сборка - npm run build

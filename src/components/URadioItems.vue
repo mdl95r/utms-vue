@@ -1,18 +1,18 @@
 <template>
-	<div v-for="(radio, index) in radios" :key="radio.id" :class="$style.radioItem">
-		<Radio :id="radio.id" :index="index" :selectedRadioId="selectedRadioId" @change-radio="changeRadio" >{{ radio.name }}</Radio>
+	<div v-for="radio in radios" :key="radio.id" class="radioItem">
+		<u-radio :id="radio.id" :selected-radio-id="selectedRadioId" @change-radio="changeRadio" >{{ radio.name }}</u-radio>
 	</div>
 </template>
 
 <script>
 
-import Radio from '@/ui/Radio/uRadio.vue';
+import URadio from '@/components/ui/Radio/uRadio.vue';
 
 export default {
 	name: 'URadioitems',
 
 	components: {
-		Radio
+		URadio,
 	},
 
 	props: {
@@ -38,7 +38,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .radioItem {
 	position: relative;
 

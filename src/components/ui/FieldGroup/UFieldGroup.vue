@@ -1,15 +1,15 @@
 <template>
-<div :class="[$style.group, { [$style[typeField]]: typeField }]">
-	<slot></slot>
-</div>
+	<div class="group" :class="[{ [type]: type }]">
+		<slot></slot>
+	</div>
 </template>
 
 <script>
 export default {
-	name: 'UFieldgroup',
+	name: 'UFieldGroup',
 
 	props: {
-		typeField: {
+		type: {
 			type: String,
 			required: true
 		}
@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .group {
 	&.radio {
 		@media (min-width: 768px) {

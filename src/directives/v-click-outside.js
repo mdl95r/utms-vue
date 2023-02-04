@@ -5,7 +5,7 @@ function clickOutSideFn(event, el, binding) {
 }
 
 export default {
-  name: 'clickOutSide',
+  name: 'click-outside',
   mounted(el, binding) {
     document.addEventListener('click', (event) => {
       clickOutSideFn(event, el, binding);

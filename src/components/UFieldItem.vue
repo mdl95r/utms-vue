@@ -1,35 +1,49 @@
 <template>
-	<div v-for="field in fields" :key="field.name" class="flex" :class="$style.fieldItem">
-		<u-fieldlabel :name="field.name" :class="$style.label"/>
-		<u-input v-model="values[field.name]" type="text" :placeholder="field.placeholder"  />
+	<div class="flex fieldItem">
+		<u-fieldlabel :name="name" class="label"/>
 
-		<u-hint v-if="hints[field.hint]" :class="$style.hint">{{ hints[field.hint] }}</u-hint>
+		<u-input :value="modelValue" :placeholder="placeholder" @input="updateInput" />
+
+		<p v-if="hint" class="hint">{{ hint }}</p>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'UFielditems',
+	name: 'UFieldItem',
 	props: {
-		fields: {
-			type: Array,
+		modelValue: {
+			type: String,
+			default: '',
+		},
+
+		name: {
+			type: String,
 			required: true
 		},
 
-		values: {
-			type: Object,
-			required: true
+		hint: {
+			type: [String],
+			default: ''
 		},
 
-		hints: {
-			type: Object,
+		placeholder: {
+			type: String,
 			required: true
-		}
+		},
 	},
+
+	emits: ["update:modelValue"],
+
+	methods: {
+		updateInput(event) {
+			this.$emit("update:modelValue", event.target.value);
+		}
+	}
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .hint {
 	font-size: 11px;
 	margin-top: 10px;

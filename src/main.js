@@ -1,14 +1,14 @@
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import components from '@/ui';
+import components from '@/components/ui';
 import directives from '@/directives';
-import uPopupCopyVue from '@/components/PopupCopy/uPopupCopy.vue';
+import UPopupCopy from '@/components/UPopupCopy.vue';
 
 const app = createApp(App);
 
 directives.forEach((directive) => app.directive(directive.name, directive));
 
-[uPopupCopyVue, ...components].forEach((component) => {
+[UPopupCopy, ...components].forEach((component) => {
   app.component(component.name, component);
 });
 

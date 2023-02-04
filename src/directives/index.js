@@ -1,4 +1,4 @@
-import vClickOutSide from './vClickOutSide';
-import vFocus from './vFocus';
+import vClickOutSide from './v-click-outside';
+import vFocus from './v-focus';
 
 export default [vFocus, vClickOutSide];

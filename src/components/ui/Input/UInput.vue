@@ -22,11 +22,11 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 input:not(input[type='radio']) {
 	flex: 1 1 auto;
 	height: 38px;
-	color: #495057;
+	color: var(--color-input);
 	padding: 5px;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 

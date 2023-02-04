@@ -1,8 +1,8 @@
 <template>
-	<div v-clickOutSide="clickOutSide" :class="[$style.dropdown, { [$style.dropdownopen]: isDropDownOpen }]">
-		<u-button :class="$style.dropdownCurrent" @click="clickOpenHandler">{{ selectedOption }}</u-button>
-		<div :class="$style.dropdownList">
-			<div v-for="option in options" :key="option" :class="$style.dropdownItem" @click="clickItemHandler(option)">{{ option }}</div>
+	<div v-click-outside="clickOutSide" class="dropdown" :class="[{ dropdownopen: isDropDownOpen }]">
+		<u-button class="dropdownCurrent" @click="clickOpenHandler">{{ selectedOption }}</u-button>
+		<div class="dropdownList">
+			<div v-for="option in options" :key="option" class="dropdownItem" @click="clickItemHandler(option)">{{ option }}</div>
 		</div>
 	</div>
 </template>
@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .dropdown {
 	position: relative;
 
@@ -88,7 +88,7 @@ export default {
 		top: 17px;
 		right: 8px;
 		content: '';
-		border-top: 4px solid #fff;
+		border-top: 4px solid var(--color-white);
 		border-right: 4px solid transparent;
 		border-bottom: 0;
 		border-left: 4px solid transparent;
@@ -103,7 +103,7 @@ export default {
 	opacity: 0;
 	visibility: hidden;
 	z-index: 100;
-	background: #fff;
+	background: var(--color-white);
 }
 
 .dropdownItem {

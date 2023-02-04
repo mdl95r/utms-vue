@@ -1,7 +1,7 @@
 <template>
-	<u-label :class="$style.radioLabel"><slot></slot>
-		<u-input :id="id" type="radio" :class="$style.radioInput" name="radio" :checked="id === selectedRadioId" @change="changeRadio(id)"/>
-		<span :class="$style.radio"></span>
+	<u-label class="radioLabel"><slot></slot>
+		<u-input :id="id" type="radio" class="radioInput" name="radio" :checked="id === selectedRadioId" @change="changeRadio(id)"/>
+		<span class="radio"></span>
 	</u-label>
 </template>
 
@@ -13,11 +13,6 @@ export default {
 		id: {
 			type: String,
 			required: true
-		},
-
-		index: {
-			type: Number,
-			default: 0
 		},
 
 		selectedRadioId: {
@@ -36,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .radioLabel {
 	padding-left: 36px;
 }
@@ -51,7 +46,7 @@ export default {
 
 	&:checked+.radio {
 		&:after {
-			background-image: url('../../assets/img/radio-checked.svg');
+			background-image: url('../../../assets/img/radio-checked.svg');
 		}
 	}
 }
@@ -66,7 +61,7 @@ export default {
 		content: "";
 		width: 20px;
 		height: 20px;
-		background-image: url('../../assets/img/radio.svg');
+		background-image: url('../../../assets/img/radio.svg');
 	}
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div :class="$style.popup">
+	<div class="popup">
 		<slot></slot>
 	</div>
 </template>
@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .popup {
 	display: flex;
 	justify-content: center;

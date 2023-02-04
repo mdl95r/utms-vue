@@ -1,5 +1,5 @@
 <template>
-	<span :class="$style.fieldName">{{ name }}</span>
+	<span class="fieldName">{{ name }}</span>
 </template>
 
 <script>
@@ -14,14 +14,14 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .fieldName {
 	display: flex;
 	flex-basis: 100%;
 	align-items: center;
 	padding: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	background-color: #e9ecef;
+	background-color: var(--fieldnameBG);
 
 	@media (max-width: 767px) {
 		margin-bottom: 10px;

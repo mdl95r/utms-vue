@@ -1,5 +1,5 @@
 <template>
-	<u-popup :class="[$style.popupCopy, { [$style.visible]: isVisible }]">Ссылка скопирована!</u-popup>
+	<u-popup class="popupCopy" :class="[{ visible: isVisible }]">Ссылка скопирована!</u-popup>
 </template>
 
 <script>
@@ -14,16 +14,16 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .popupCopy {
 	max-width: 300px;
 	height: 40px;
 	right: 0;
 	bottom: -999px;
 	padding: 5px;
-	color: #fff;
+	color: var(--color-white);
 	padding: 5px;
-	background-color: #fa876b;
+	background-color: var(--color-pink);
 }
 
 .visible {

@@ -1,28 +1,28 @@
 <template>
-	<button :class="$style.button">
+	<button class="button">
 		<slot></slot>
 	</button>
 </template>
 
 <script>
-	export default {
-		name: 'UButton'
-	};
+export default {
+	name: 'UButton'
+};
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .button {
 	display: flex;
 	align-items: center;
-	color: #fff;
+	color: var(--color-white);
 	padding: 10px 25px 10px 10px;
 	border-radius: 4px 0px 0px 4px;
 	transition: opacity 0.4s;
-	background: #232326;
+	background: var(--color-dark);
 	cursor: pointer;
 
 	&:hover {
-		background: #ee725f;
+		background: var(--color-pink);
 		transition: 0.2s;
 	}
 
@@ -30,8 +30,9 @@
 		opacity: 0.65;
 		transition: opacity 0.4s;
 		cursor: not-allowed;
+
 		&:hover {
-			background: #232326;
+			background: var(--color-dark);
 		}
 	}
 }
