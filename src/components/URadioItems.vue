@@ -6,14 +6,8 @@
 
 <script>
 
-import URadio from '@/components/ui/Radio/uRadio.vue';
-
 export default {
 	name: 'URadioitems',
-
-	components: {
-		URadio,
-	},
 
 	props: {
 		radios: {
